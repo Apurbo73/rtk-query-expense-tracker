@@ -12,9 +12,9 @@ const Add = () => {
         />
         <div className="mt-3">
           <label>Type:</label>
-          <input className="ms-2 mt-3" type="radio" />
+          <input className="ms-2 mt-3" type="checkbox" />
           <label>Income</label>
-          <input className="ms-2" type="radio" />
+          <input className="ms-2" type="checkbox" />
           <label>Expense</label>
         </div>
         <div className="mt-2 mb-2">
