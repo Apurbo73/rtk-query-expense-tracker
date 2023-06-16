@@ -42,9 +42,9 @@ const ViewAllTransactions = ({ all }) => {
           <i className="fa-solid fa-trash-can" />
         </button>
 
-        <button className="btn text-dark">
+        <Link to={`/transactions/edit/${id}`} className="btn text-dark">
           <i className="fa-sharp fa-solid fa-pencil" />
-        </button>
+        </Link>
       </div>
     </div>
   );

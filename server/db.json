@@ -1,13 +1,7 @@
 {
   "transactions": [
     {
-      "name": "Salary",
-      "type": "income",
-      "amount": 6000,
-      "id": 1
-    },
-    {
-      "name": "Salary",
+      "name": "Wages",
       "type": "income",
       "amount": 6000,
       "id": 2
