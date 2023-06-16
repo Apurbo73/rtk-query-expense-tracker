@@ -4,10 +4,22 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3001"
   }),
+  tagTypes: ["Transactions"],
   endpoints: builder => ({
     gettAllTransactions: builder.query({
-      query: () => "/transactions"
+      query: () => "/transactions",
+      providesTags: "Transactions"
+    }),
+    deleteTransaction: builder.mutation({
+      query: id => ({
+        url: `/transactions/${id}`,
+        method: "DELETE"
+      }),
+      invalidatesTags: ["Transactions"]
     })
   })
 });
-export const { useGettAllTransactionsQuery } = apiSlice;
+export const {
+  useGettAllTransactionsQuery,
+  useDeleteTransactionMutation
+} = apiSlice;

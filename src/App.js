@@ -9,6 +9,8 @@ function App() {
     <BrowserRouter className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/transactions/:tId" element={<Home />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -1,19 +1,53 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDeleteTransactionMutation } from "../../features/apiSLice";
 
-const ViewAllTransactions = ({all}) => {
-    const {name,type,amount,id}= all;
-    return (
-        <div>
-           <div style={{backgroundColor:'#ECECEC'}} className="d-flex mx-auto w-100 text-dark mt-3 ">
-           <p className='m-2 me-auto'> {id}</p>
-            <p className='m-2 me-auto'> {name}</p>
-            <p className='m-2 me-auto' >{amount}</p>
-            <button className='btn text-dark'><i class="fa-solid fa-trash-can"></i></button>
-            <button className='btn text-dark'><i class="fa-sharp fa-solid fa-pencil"></i></button>
+const ViewAllTransactions = ({ all }) => {
+  const navigate = useNavigate();
+  const { name, type, amount, id } = all;
+  const [
+    deleteTransaction,
+    { isLoading, isError, error, isSuccess }
+  ] = useDeleteTransactionMutation();
+  //handle Delete:
+  const handleDelete = e => {
+    e.preventDefault();
+    deleteTransaction(id);
+  };
+//   useEffect(
+//     () => {
+//       {
+//         isSuccess && navigate("/");
+//       }
+//     },
+//     [isSuccess]
+//   );
+  return (
+    <div>
+      <div
+        style={{ backgroundColor: "#ECECEC" }}
+        className="d-flex mx-auto w-100 text-dark mt-3 "
+      >
+        <p className="m-2 me-auto">
+          {id}
+        </p>
+        <p className="m-2 me-auto">
+          {name}
+        </p>
+        <p className="m-2 me-auto">
+          {amount} Tk
+        </p>
 
-           </div>
-        </div>
-    );
+        <button className="btn text-dark" onClick={handleDelete}>
+          <i className="fa-solid fa-trash-can" />
+        </button>
+
+        <button className="btn text-dark">
+          <i className="fa-sharp fa-solid fa-pencil" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default ViewAllTransactions;
