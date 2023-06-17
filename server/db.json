@@ -1,10 +1,16 @@
 {
   "transactions": [
     {
-      "name": "Wages",
-      "type": "income",
-      "amount": 6000,
-      "id": 2
+      "name": "Smart Watch",
+      "type": "Expense",
+      "amount": 450,
+      "id": 5
+    },
+    {
+      "name": "Salary",
+      "type": "Income",
+      "amount": 450000,
+      "id": 6
     }
   ]
 }

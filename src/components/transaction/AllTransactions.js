@@ -15,7 +15,7 @@ const AllTransactions = () => {
     content = <div>Loading....</div>;
   }
   if (!isLoading && isError) {
-    content = <div>Something went wrong....</div>;
+    content = <div>No Transaction Found....</div>;
   }
   if (!isLoading && !isError && transactions.length > 0) {
     content = transactions.map(t => <ViewAllTransactions key={t.id} all={t} />);

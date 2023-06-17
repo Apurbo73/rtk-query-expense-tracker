@@ -11,8 +11,18 @@ export const apiSlice = createApi({
       providesTags: ["Transactions"]
     }),
     singleTransaction: builder.query({
-      query:(id)=> `/transactions/${id}`
+      query: id => `/transactions/${id}`
     }),
+
+    addTransaction: builder.mutation({
+      query: data => ({
+        url: `/transactions`,
+        method: "POST",
+        body: data
+      }),
+      invalidatesTags: ["Transactions"]
+    }),
+
     deleteTransaction: builder.mutation({
       query: id => ({
         url: `/transactions/${id}`,
@@ -27,7 +37,6 @@ export const apiSlice = createApi({
         body: data
       }),
       invalidatesTags: ["Transactions"]
-
     })
   })
 });
@@ -35,5 +44,6 @@ export const {
   useGettAllTransactionsQuery,
   useDeleteTransactionMutation,
   useUpdateTransactionMutation,
-  useSingleTransactionQuery
+  useSingleTransactionQuery,
+  useAddTransactionMutation
 } = apiSlice;
