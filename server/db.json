@@ -11,6 +11,12 @@
       "type": "Income",
       "amount": 450000,
       "id": 6
+    },
+    {
+      "name": "Flat",
+      "type": "Income",
+      "amount": 45000000,
+      "id": 7
     }
   ]
 }
