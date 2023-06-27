@@ -32,8 +32,8 @@ const Balance = () => {
             <h4>
               Tk {total(transactions)}
             </h4>
-            {total(transactions)<0 && <p className="text-danger bg-light w-25 p-2 mx-auto">Expense More Than Income</p>}
-            {total(transactions)>0 && <p className="text-light bg-success w-25 p-2 mx-auto">Income Is Raising</p>}
+            {/* {total(transactions)<0 && <p className="text-danger bg-light w-25 p-2 mx-auto">Expense More Than Income</p>}
+            {total(transactions)>0 && <p className="text-light bg-success w-25 p-2 mx-auto">Income Is Raising</p>} */}
 
           </div>
         </div>

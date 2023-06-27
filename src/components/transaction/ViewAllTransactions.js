@@ -30,8 +30,8 @@ const ViewAllTransactions = ({ all }) => {
   return (
     <div>
       <ToastContainer />
-      <div className={`${type}`}>
-        <div className="d-flex mx-auto w-100 text-dark mt-2 ">
+      <div className={`${type} `}>
+        <div className="d-flex  w-100 text-dark mt-2 ">
           <p className="m-2 me-auto">
             {type}
           </p>
