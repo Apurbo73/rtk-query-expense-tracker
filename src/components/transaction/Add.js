@@ -25,10 +25,10 @@ const Add = () => {
     setAmount("");
   };
   return (
-    <div>
+    <div className="row">
       <div
         style={{ backgroundColor: "#ECECEC" }}
-        className="mx-auto w-50 mt-2 text-center p-1"
+        className="mx-auto col-12 col-md-6 col-lg-6 mt-2 text-center p-1"
       >
         <p>Add new transaction</p>
         <form onSubmit={handleCreate}>
@@ -78,7 +78,7 @@ const Add = () => {
           <button
           disabled={isLoading}
             type="submit"
-            className="btn btn-primary text-light w-50 mb-2"
+            className="btn submit-bg text-light col-md-5 col-lg-5 col-5 mb-2"
           >
             Submit
           </button>

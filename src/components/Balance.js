@@ -22,21 +22,14 @@ const Balance = () => {
   };
 
   return (
-    <div>
-      <div className="w-50 bg-primary mt-5 mx-auto text-light p-3 text-center">
-        <div className="">
-          <div>
-            <h5>Expense Tracker</h5>
+    <div className="row">
+      <div className="col-md-6 col-lg-6 col-12 balance-bg mt-3 mx-auto text-light p-3 text-center">
+        <h5>Expense Tracker</h5>
 
-            <p>Total Transactions</p>
-            <h4>
-              Tk {total(transactions)}
-            </h4>
-            {/* {total(transactions)<0 && <p className="text-danger bg-light w-25 p-2 mx-auto">Expense More Than Income</p>}
-            {total(transactions)>0 && <p className="text-light bg-success w-25 p-2 mx-auto">Income Is Raising</p>} */}
-
-          </div>
-        </div>
+        <p>Your Balance</p>
+        <h4>
+          {total(transactions)} Taka
+        </h4>
       </div>
     </div>
   );

@@ -5,3 +5,9 @@
     background-color: rgb(247, 118, 118);
 
 }
+.footer-bg, .balance-bg,.submit-bg{
+    background-color: teal;
+}
+body{
+    background-color: azure;
+}

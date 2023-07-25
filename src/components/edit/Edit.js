@@ -17,9 +17,11 @@ const Edit = () => {
     );
   }
   return (
-    <div className="w-25 mx-auto mt-5">
-      <h5 className="text-center mb-4">Edit Transaction Details</h5>
+    <div className="row mx-auto mt-5">
+      <h5 className="text-center mb-4 ">Edit Transaction Details</h5>
+      <div className="col-12 col-md-4 col-lg-4 mx-auto">
       {content}
+      </div>
     </div>
   );
 };

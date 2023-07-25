@@ -21,10 +21,14 @@ const AllTransactions = () => {
     content = transactions.map(t => <ViewAllTransactions key={t.id} all={t} />);
   }
   return (
-    <div className="w-50 mx-auto mt-4">
+    <div className="  mt-4 ">
       <h5 className="text-center">Your Transactions</h5>
-
-      {content}
+      <div className="row">
+      <div className="col-md-6 col-lg-6 mx-auto ">
+        {content}
+      </div>
+      </div>
+     
     </div>
   );
 };
